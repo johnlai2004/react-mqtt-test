@@ -43,8 +43,7 @@ const startMQTT = (options) => {
             );
         };
         client.onMessageArrived = (message) => {
-            const content = JSON.parse(message.payloadString);
-            console.log(content);
+            console.log(message.payloadString);
         };
         //mqtt.alwaysConnect(client, topicWeb, user, pass, this.pageState);
         mqtt.alwaysConnect(client, topicWeb, user, pass);
